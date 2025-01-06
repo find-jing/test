@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <h2>工作设置</h2>
+    <div class="form-group">
+        <label for="salary">月薪（元）</label>
+        <input type="number" id="salary" placeholder="请输入月薪" title="月薪" />
+    </div>
+    <div class="form-group">
+        <label for="workDays">每月工作天数</label>
+        <input type="number" id="workDays" placeholder="请输入工作天数" title="工作天数" />
+    </div>
+    <div class="form-group">
+        <label for="startTime">上班时间</label>
+        <input type="time" id="startTime" title="上班时间" />
+    </div>
+    <div class="form-group">
+        <label for="endTime">下班时间</label>
+        <input type="time" id="endTime" title="下班时间" />
+    </div>
+    <div class="form-group">
+        <label for="hasLunch">
+            <input type="checkbox" id="hasLunch" />
+            有午休时间
+        </label>
+    </div>
+    <div id="lunchTimeInputs" style="display: none;">
+        <div class="form-group">
+            <label for="lunchStart">午休开始时间</label>
+            <input type="time" id="lunchStart" title="午休开始时间" />
+        </div>
+        <div class="form-group">
+            <label for="lunchEnd">午休结束时间</label>
+            <input type="time" id="lunchEnd" title="午休结束时间" />
+        </div>
+    </div>
+    <button id="save">保存设置</button>
+    <script src="options.js"></script>
+</body>
+</html> 

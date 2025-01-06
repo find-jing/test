@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>看看下班没</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-title">
+            <h1>看看下班没</h1>
+        </div>
+        <div class="current-time">
+            <div id="date"></div>
+            <div id="time"></div>
+        </div>
+        <div class="weekend-countdown">
+            <span>距离周末还有：</span>
+            <span id="weekend-time"></span>
+        </div>
+        <div class="work-progress">
+            <div class="work-title">
+                <span>距离下班还有：</span>
+                <span id="time-until-off"></span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <div id="progress-text"></div>
+        </div>
+        <div class="earnings">
+            <div>今日已赚：</div>
+            <div id="earned-money" class="masked-money">
+                <span class="masked">¥****</span>
+                <span class="actual" style="display: none;">¥0.00</span>
+            </div>
+        </div>
+        <div class="poem-container">
+            <div id="poem" class="poem"></div>
+        </div>
+        <div class="settings-container">
+            <button id="toggleSettings" class="settings-button">⚙️ 设置</button>
+            <div id="settingsPanel" class="settings-panel" style="display: none;">
+                <div class="form-group">
+                    <label for="salary">月薪（元）</label>
+                    <input type="number" id="salary" placeholder="请输入月薪" />
+                </div>
+                <div class="form-group">
+                    <label for="workDays">每月工作天数</label>
+                    <input type="number" id="workDays" placeholder="请输入工作天数" />
+                </div>
+                <div class="form-group">
+                    <label for="startTime">上班时间</label>
+                    <input type="time" id="startTime" />
+                </div>
+                <div class="form-group">
+                    <label for="endTime">下班时间</label>
+                    <input type="time" id="endTime" />
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="hasLunch" />
+                        <span>有午休时间</span>
+                    </label>
+                </div>
+                <div id="lunchTimeInputs" style="display: none;">
+                    <div class="form-group">
+                        <label for="lunchStart">午休开始时间</label>
+                        <input type="time" id="lunchStart" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lunchEnd">午休结束时间</label>
+                        <input type="time" id="lunchEnd" />
+                    </div>
+                </div>
+                <button id="saveSettings" class="save-button">保存设置</button>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 
